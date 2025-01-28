@@ -1,6 +1,6 @@
-import { CountryDetails } from '../type';
+import { CountryDetails } from '../../type/type';
 
-const apiUrl = "https://restcountries.com/v3.1"; //basurl till mitt API
+const apiUrl = "https://restcountries.com/v3.1"; //basurl till mitt API  1Endpoint
 
 // Funktion för att hämta alla länder
 export async function fetchCountries(): Promise < CountryDetails[]> { //Promise < CountryDetails[] visar tydligt att denna returnerar en arrya av CountryDetails.
@@ -29,3 +29,5 @@ export async function fetchCountryByName(name: string): Promise<CountryDetails[]
         return [];
     }
 }
+
+

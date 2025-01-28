@@ -1,11 +1,12 @@
 import './main.scss'; 
 import { fetchCountries, fetchCountryByName } from "./component/api/api";
-import { CountryDetails } from './component/type';
+import { CountryDetails } from './type/type';
 
 // DOM-element
 const searchInput = document.querySelector<HTMLInputElement>("#search-input");
 const searchButton = document.querySelector<HTMLButtonElement>("#search-button");
 const resultsContainer = document.querySelector<HTMLDivElement>("#results-container");
+const searchContainer = document.querySelector<HTMLDivElement>(".search-container");
 
 // Funktion där vi skapar ett kort
 function createCountryCard(country: CountryDetails): HTMLElement { // här har vi argument country och objet 
@@ -21,7 +22,7 @@ function createCountryCard(country: CountryDetails): HTMLElement { // här har v
     return card;
 }
 
-// Rendera resultatet
+// Rendera länder
 function renderCountries(countries: CountryDetails[]) {
     resultsContainer.replaceChildren(); // Här rensar vi tidigare resultat
     countries.forEach((country) => {
