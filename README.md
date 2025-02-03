@@ -1,5 +1,5 @@
 # Country-Explorer-App<br>
-
+```
 Folder Structure <br>
 
 <pre>
@@ -29,3 +29,4 @@ Folder Structure <br>
 ├── README.md
 └── tsconfig.json
 </pre>
+```
