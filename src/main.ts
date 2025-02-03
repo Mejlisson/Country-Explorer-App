@@ -1,38 +1,42 @@
 import './main.scss'; 
-import "../src/component/search/search.scss";
 import { fetchRandomCountries } from "./component/api/api"; 
 import { renderCountries } from './component/render/render';
-import "../src/component/filter/filter";
-import "../src/component/render/render";
-import "../src/component/details/details";
+import { createDropDown, filterCountries } from '../src/component/filter/filter';
 import { handleSearch } from './component/search/search';
-import { createDropDown } from '../src/component/filter/filter';
 
 // DOM-element
 const searchInput = document.querySelector<HTMLInputElement>("#search-input");
 const searchButton = document.querySelector<HTMLButtonElement>("#search-button");
 const searchContainer = document.querySelector<HTMLDivElement>(".search-container");
+const filterDropdown = createDropDown();
+searchContainer?.appendChild(filterDropdown);
 
-// Kontrollera att alla DOM-element existerar
-if (!searchInput || !searchButton || !searchContainer) {
-    console.error("Required DOM elements are missing");
-    throw new Error("Required DOM elements are missing");
+//Ändra placering av filter
+if (searchContainer && searchInput) {
+    searchContainer.insertBefore(filterDropdown, searchInput); //insertBefore - Detta var något nytt och väldigt bra
 }
 
-// Eventlyssnare för sökknappen
-searchButton.addEventListener('click', () => handleSearch(searchInput.value.trim()));
+// Kontrollera att DOM-element finns
+if (!searchInput || !searchButton || !searchContainer) {
+    throw new Error("Kritiska DOM-element saknas!");
+}
 
-// Eventlyssnare för Enter-tangenten i sökfältet
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        handleSearch(searchInput.value.trim());
+// Event listeners
+searchButton.addEventListener("click", () => {
+    const query = searchInput.value.trim();
+    const filterType = filterDropdown.value;
+    handleSearch(query, filterType); // Se till att handleSearch tar två parametrar
+});
+
+searchInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        const query = searchInput.value.trim();
+        const filterType = filterDropdown.value;
+        handleSearch(query, filterType);
     }
 });
 
-// Hämta och visa 20 slumpmässiga länder vid sidstart
+//Hämta och visa 20 slumpmässiga länder vid sidstart
 fetchRandomCountries()
     .then(renderCountries)
-    .catch((error) => console.error("Failed to render countries:", error));
-
-const dropdown = createDropDown();
-// app.appendChild(dropdown)
+    .catch((error) => console.error("Renderingsfel:", error));

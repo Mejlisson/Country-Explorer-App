@@ -77,16 +77,17 @@ footer {
     border-radius: 12px; // border 
     @include mixin.box-shadow(0px, 4px, 10px, rgba(0, 0, 0, 0.1)); // Skugga
     padding: 20px;
-    width: auto; // Tar hela bredden av kolumnen
-    
-    // Anpassar höjden för att täcka båda raderna
+    width: 100%;
+    height: 100%;
+    position: relative; //  absolute positioning of shadow
+  
     iframe {
       width: 100%;
       height: 100%;
-      border: none; // Tar bort kantlinjer runt iframes
-      border-radius: 8px; // Rundade hörn för kartan
+      border: none;
+      border-radius: 8px;
+        }
     }
-  }
 }
 
 /* Responsiv layout */

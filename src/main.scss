@@ -17,16 +17,37 @@ nav {
     text-align: center;
     @include mixin.box-shadow(0px, 2px, 4px, rgba(0, 0, 0, 0.1));
     color: #5d6d8a;
+    
   }
   
 // Footer
 footer {
-    background-color: #e7f0fd;
-    text-align: center;
-    padding: 10px;
-    font-size: 1rem;
-    color: #5d6d8a;
+    background-color: #e8f1fc; // Matches the light blue background
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow at the top
+  
+    .gif-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; // Spacing between elements
+  
+      img {
+        height: 50px; // Set gif size
+        width: 50px; // Maintain uniform size
+        object-fit: contain; // Ensure gifs don't stretch
+        border-radius: 50%; // Add rounded effect
+      }
+  
+      .text {
+        font-size: 1.5rem; // Large text size
+        font-family: 'Comic Sans MS', cursive, sans-serif; // Fun font for "Adventure Time"
+        color: #5d6d8a; // Soft blue text color
+      }
+    }
   }
   
-
   
+
