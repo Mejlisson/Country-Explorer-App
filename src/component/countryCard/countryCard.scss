@@ -3,10 +3,11 @@
 
 // Country Card
 .country-card {
-    background-color: #f4f9ff;
+    background-color: #CAE0F9;
     overflow: hidden;
     text-align: center;
     display: flex; 
+    border-radius: 5px;
     flex-direction: column; //stapla innehåll vertikalt..
     align-items: center; // Centrerar innehållet horisontellt
     justify-content: space-between; // Fördelar utrymmet jämt
@@ -25,6 +26,8 @@
       font-size: 1.5rem;
       color: #5d6d8a;
       margin: 10px 0;
+      border-top: solid white 1px;
+      width: auto;
     }
   
     p {

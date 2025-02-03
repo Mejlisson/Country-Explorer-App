@@ -6,7 +6,7 @@ export const createDropDown = (): HTMLSelectElement => {
     const filterDropdown = document.createElement("select");
     filterDropdown.id = "filter-dropdown";
     filterDropdown.innerHTML = `
-        <option value="all">All</option>
+        <option value="all">Filter</option>
         <option value="name">Name</option>
         <option value="region">Region</option>
         <option value="subregion">Subregion</option>

@@ -27,14 +27,14 @@ const displayCountryDetail = async () => {
                 infoCard.innerHTML = `
                     <h1>${detail.name.common}</h1>
                     <p>Region: ${detail.region}</p>
+                    <p>Capital: ${detail.capital}</p>
                     <p>Population: ${detail.population}</p>
                     <p>Languages: ${Object.values(detail.languages).join(', ')}</p>
                     <p>Borders: ${detail.borders?.join(', ') || 'None'}</p>
                     <p>Currency: ${Object.values(detail.currencies).map((c: any) => c.name).join(', ')}</p>
                     <p>Timezone: ${detail.timezones.join(', ')}</p>
                     <p>Start of Week: ${detail.startOfWeek}</p>
-                `;
-            }
+                `;}
 
             // Kort 3: Karta
             if (mapCard) {

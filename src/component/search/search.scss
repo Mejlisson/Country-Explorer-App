@@ -4,7 +4,7 @@
 .search-container {
     @include mixin.flex-center(row, 10px); // Flexbox mixin
     padding: 20px;
-    background-color: #e7f0fd;
+    background-color: #DDEAF9;
     @include mixin.box-shadow(0px, 1px, 3px, rgba(0, 0, 0, 0.1));
   
     select,
@@ -12,7 +12,7 @@
     button {
       padding: 10px 15px;
       font-size: 1rem;
-      border: 1px solid #b3c6e0;
+      border: 1px solid #DDEAF9;
       border-radius: 5px;
       outline: none;
     }
