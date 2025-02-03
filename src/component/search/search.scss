@@ -1,0 +1,39 @@
+@use "../../styles/mixin.scss";
+
+// Sökcontainer
+.search-container {
+    @include mixin.flex-center(row, 10px); // Flexbox mixin
+    padding: 20px;
+    background-color: #e7f0fd;
+    @include mixin.box-shadow(0px, 1px, 3px, rgba(0, 0, 0, 0.1));
+  
+    select,
+    input[type="text"],
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: 1px solid #b3c6e0;
+      border-radius: 5px;
+      outline: none;
+    }
+  
+    select {
+      background-color: #f9fbfd;
+      cursor: pointer;
+    }
+  
+    button {
+      background-color: #6c8ed1;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+  
+      @include mixin.hover-scale(1.1); // Hovereffekt med mixin
+    }
+  
+    input[type="text"] {
+      width: 300px;
+      background-color: #f9fbfd;
+    }
+}

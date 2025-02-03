@@ -1,22 +1,30 @@
-nav{
-	height: auto;
-    width: auto;
-    background-color: #DDEAF9;
-    margin-bottom: 15px;
-};
+@use ".././src/styles/mixin.scss";      
 
-.search-container{
-    background-color: #DDEAF9;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-footer{
-    background-color: #DDEAF9;
-}
-
-.country-card{
-    background-color: #CAE0F9;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dce7f4; // Ljusblå bakgrund
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+// Navigation
+nav {
+    background-color: #e7f0fd; // Ljusare blå för header
     padding: 20px;
-    margin-bottom: 15px;
-}
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    @include mixin.box-shadow(0px, 2px, 4px, rgba(0, 0, 0, 0.1));
+    color: #5d6d8a;
+  }
+  
+// Footer
+footer {
+    background-color: #e7f0fd;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    color: #5d6d8a;
+  }
+  

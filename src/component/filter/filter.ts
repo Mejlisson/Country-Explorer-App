@@ -1,4 +1,3 @@
-// src/components/Filter/Filter.ts
 import "./filter.scss";
 import { CountryDetails } from "../../type/type";
 
@@ -21,7 +20,13 @@ filterDropdown.innerHTML = `
     <option value="startOfWeek">Start of Week</option>
 `;
 
+export const createDropDown = () => {
+    // skapa dropdown
+    // göra massa saker med den
+    // return dropdown
+}
 
+//Funktioner för Filter
 export function filterCountries(countries: CountryDetails[], filterType: string, query: string): CountryDetails[] {
     switch (filterType) {
         case "name":

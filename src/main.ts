@@ -1,55 +1,38 @@
 import './main.scss'; 
-import { fetchCountries, fetchCountryByName } from "./component/api/api";
-import { CountryDetails } from './type/type';
+import "../src/component/search/search.scss";
+import { fetchRandomCountries } from "./component/api/api"; 
+import { renderCountries } from './component/render/render';
+import "../src/component/filter/filter";
+import "../src/component/render/render";
+import "../src/component/details/details";
+import { handleSearch } from './component/search/search';
+import { createDropDown } from '../src/component/filter/filter';
 
 // DOM-element
 const searchInput = document.querySelector<HTMLInputElement>("#search-input");
 const searchButton = document.querySelector<HTMLButtonElement>("#search-button");
-const resultsContainer = document.querySelector<HTMLDivElement>("#results-container");
 const searchContainer = document.querySelector<HTMLDivElement>(".search-container");
 
-// Funktion där vi skapar ett kort
-function createCountryCard(country: CountryDetails): HTMLElement { // här har vi argument country och objet 
-    const card = document.createElement("div");
-    card.className = "country-card";
-
-    card.innerHTML = `
-        <img src="${country.flags.svg}" alt="Flag of ${country.name}" class="country-flag" />
-        <h2 class="country-name">${country.name.common}</h2>
-        <p clzss="country-capital"> Capital: ${country.capital}</p>
-        <p class="country-region">Region: ${country.region}</p>
-        <p class="country-population">Population: ${country.population?.toLocaleString()}</p>`; 
-    return card;
+// Kontrollera att alla DOM-element existerar
+if (!searchInput || !searchButton || !searchContainer) {
+    console.error("Required DOM elements are missing");
+    throw new Error("Required DOM elements are missing");
 }
 
-// Rendera länder
-function renderCountries(countries: CountryDetails[]) {
-    resultsContainer.replaceChildren(); // Här rensar vi tidigare resultat
-    countries.forEach((country) => {
-        const card = createCountryCard(country);
-        resultsContainer.appendChild(card);
-    });
-}
+// Eventlyssnare för sökknappen
+searchButton.addEventListener('click', () => handleSearch(searchInput.value.trim()));
 
-// Funktion för sökhantering
-async function handleSearch() {
-    const query = searchInput.value.trim();
-    if (query) {
-        const countries = await fetchCountryByName(query);
-        renderCountries(countries);
-    } else {
-        const countries = await fetchCountries();
-        renderCountries(countries);
-    }
-}
-
-// En eventlyssnare
-searchButton.addEventListener('click', handleSearch);
+// Eventlyssnare för Enter-tangenten i sökfältet
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-        handleSearch();
+        handleSearch(searchInput.value.trim());
     }
 });
 
-// Vi hämta och visa alla länder vid sidstart
-fetchCountries().then(renderCountries);
+// Hämta och visa 20 slumpmässiga länder vid sidstart
+fetchRandomCountries()
+    .then(renderCountries)
+    .catch((error) => console.error("Failed to render countries:", error));
+
+const dropdown = createDropDown();
+// app.appendChild(dropdown);

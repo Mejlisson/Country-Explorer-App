@@ -21,7 +21,7 @@ export type CountryDetails = {
     area:         number;
     demonyms:     string;
     flag:         string;
-    maps:         string;
+    maps:         {googleMaps:string};
     population:   number;
     fifa:         string;
     car:          string;

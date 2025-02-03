@@ -1,0 +1,25 @@
+ // Mixin för flexbox
+ @mixin flex-center($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+  }
+  
+  // Mixin för skuggor
+  @mixin box-shadow($x: 0px, $y: 2px, $blur: 6px, $color: rgba(0, 0, 0, 0.15)) {
+    box-shadow: $x $y $blur $color;
+  }
+  
+  // Mixin för hover-effekter
+  @mixin hover-scale($scale: 1.05, $duration: 0.3s) {
+    transition: transform $duration ease-in-out;
+    &:hover {
+      transform: scale($scale);
+    }
+  }
+
+
+
+  //Variablar

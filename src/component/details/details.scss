@@ -1,0 +1,140 @@
+@use "../../styles/mixin.scss";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8f1fc; //bakgrundsfärg
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #e7f0fd; //header
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  @include mixin.box-shadow(0px, 2px, 4px, rgba(0, 0, 0, 0.1));
+  color: #5d6d8a;
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #60789e;
+  background-color: #f5faff;
+  padding: 10px 0;
+  margin-top: 20px;
+  border-top: 2px solid #dce7f3;
+}
+
+.details-container {
+  display: grid;
+  margin: 50px;
+  grid-template-columns: 1fr 2fr; // Vänster för flagga + info, höger för kartan
+  grid-template-rows: auto auto; // automatiskt höjd för varje rad
+  gap: 20px; // mellanrum mellan korten
+  padding: 20px;
+  min-height: calc(100vh - 150px); // Justerar för nav och footer
+
+  #flag-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    @include mixin.box-shadow(0px, 4px, 10px, rgba(0, 0, 0, 0.1));
+    display: flex;
+    justify-content: center;
+    align-items: auto;
+    height: 300px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  #info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    @include mixin.box-shadow(0px, 4px, 10px, rgba(0, 0, 0, 0.1));
+    padding: 20px;
+    height: 300px; // Samma höjd som flaggkortet
+    text-align: left;
+    h1 {
+      font-size: 1.8rem;
+      color: #3a4b61;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1rem;
+      color: #60789e;
+      margin: 5px 0;
+    }
+  }
+
+  #map-card {
+    grid-column: 2 / 3; // hur mck kartan täcker högra kolumnen
+    grid-row: 1 / span 2; // kartan ska täcker båda raderna
+    background-color: #ffffff; // kartans bakgrund
+    border-radius: 12px; // border 
+    @include mixin.box-shadow(0px, 4px, 10px, rgba(0, 0, 0, 0.1)); // Skugga
+    padding: 20px;
+    width: auto; // Tar hela bredden av kolumnen
+    
+    // Anpassar höjden för att täcka båda raderna
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none; // Tar bort kantlinjer runt iframes
+      border-radius: 8px; // Rundade hörn för kartan
+    }
+  }
+}
+
+/* Responsiv layout */
+@media (max-width: 768px) {
+  .details-container {
+    grid-template-columns: 1fr; // Alla kort staplas i en kolumn
+    grid-template-rows: auto; // Varje rad anpassas automatiskt
+  }
+
+  #flag-card,
+  #info-card,
+  #map-card {
+    grid-column: auto; // Alla kort täcker hela raden
+    height: auto; // Låt höjden anpassas dynamiskt
+  }
+
+  #map-card {
+    iframe {
+      height: 300px; // Begränsar kartans höjd på mobiler
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    font-size: 1.5rem; // Mindre textstorlek för navigationen
+  }
+
+  footer {
+    font-size: 0.9rem; // Mindre textstorlek för footern
+  }
+
+  .details-container {
+    padding: 10px; // Minska paddingen för små skärmar
+    gap: 15px; // Mindre mellanrum mellan korten
+  }
+
+  #flag-card,
+  #info-card,
+  #map-card {
+    padding: 15px; // Mindre inre marginaler
+  }
+
+  h1 {
+    font-size: 1.5rem; // Mindre rubrikstorlek
+  }
+
+  p {
+    font-size: 0.9rem; // Mindre textstorlek i informationskortet
+  }
+}
