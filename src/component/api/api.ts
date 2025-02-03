@@ -1,5 +1,4 @@
 import { CountryDetails } from '../../type/type';
-
 const apiUrl = "https://restcountries.com/v3.1"; //basurl till mitt API  1 Endpoint
 
 // Funktion för att hämta alla länder
@@ -33,7 +32,7 @@ export async function searchCountriesByName(query: string): Promise<CountryDetai
   }
 }
 
-// Funktion för att hämta 20 random länder, denna förnyas vid varje uppdatering
+// Funktion för att hämta 20 random länder, denna förnyas vid
 export async function fetchRandomCountries() {
   const countries = await fetchCountries();
   const shuffledCountries = shuffleArray(countries); // Blanda arrayen

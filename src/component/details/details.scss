@@ -82,7 +82,7 @@ body {
       
       p {
         font-size: 1rem;
-        color: $color-secondary;
+        color: #60789e;
         margin: 10px 0;
       }
     }
@@ -144,7 +144,7 @@ body {
     }
   }
   
-  @media (max-width: $breakpoint-mobile) {
+  @media (max-width: 480px) {
     .details-container {
       margin: 10px;
       
