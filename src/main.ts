@@ -35,4 +35,4 @@ fetchRandomCountries()
     .catch((error) => console.error("Failed to render countries:", error));
 
 const dropdown = createDropDown();
-// app.appendChild(dropdown);
+// app.appendChild(dropdown)
