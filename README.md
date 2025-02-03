@@ -1,23 +1,32 @@
-# Country-Explorer-App<br>
+# Country Explorer App 🌍<br>
 
-<h1>How to install</h1><br>
+A web application that allows you to explore details about various countries using the REST Countries API. 
+With features like filtering, searching, and detailed country profiles, this is a fully-fledged application to explore the world!
+
+<h1>Features ⭐</h1>
+<li>**Search by name:** Quickly find a country by entering its name</li>
+<li>**Filter by region,** population, and more: Use a dropdown menu to filter based on various criteria.</li>
+<li>**Detailed view:** Click on a country to see its details, including map links and statistics.</li>
+<li>**Random country view:** See a list of random countries on the homepage.</li>
 
 <h1>How to compile and run your project</h1><br>
-
-<h1>Folder Structure</h1><br>
+<li>Clone this repository:</li>
+<li>npm install </li>
+<li>npm run dev</li>
+<h1>Folder Structure📂</h1><br>
 ```
 <pre>
 ├── public
 ├── src
 │   ├── component
 │   │   ├── api
-│   │   │   └── api.ts
+│   │   │   └── api.ts            #Functions for fetching data from the REST Countries API
 │   │   ├── countryCard
 │   │   │   ├── countryCard.scss
-│   │   │   └── countryCard.ts
+│   │   │   └── countryCard.ts    #Logic for rendering individual country cards
 │   │   ├── details
 │   │   │   ├── details.scss
-│   │   │   └── details.ts
+│   │   │   └── details.ts        #Logic for rendering detailed country information
 │   │   ├── filter
 │   │   │   ├── filter.scss
 │   │   │   └── filter.ts
@@ -26,13 +35,13 @@
 │   │   │   └── render.ts
 │   │   ├── search
 │   │   │   ├── search.scss
-│   │   │   └── search.ts
+│   │   │   └── search.ts          #Logic for handling search queries
 │   │   ├── style
 │   │   │   └── mixin.scss
 │   │   ├── type
-│   │       └── type.ts
+│   │       └── type.ts            #Type definitions for country objects and API responses
 │   ├── main.scss
-│   ├── main.ts
+│   ├── main.ts                    #Main entry point for the application
 │   └── vite-env.d.ts
 ├── .gitignore
 ├── detail.html
@@ -44,4 +53,19 @@
 └── tsconfig.json
 </pre>
 ```
-<h1>API Documentation </h1><br>
+<h1>API Documentation🌐 </h1><br>
+The project uses the** REST Countries API** to fetch country data.
+<p>API Endpoints</p>
+<li>Fetch all countries: https://restcountries.com/v3.1/all</li>
+<li>Search for a country by name: https://restcountries.com/v3.1/name/{name}</li>
+
+<h1>Technologies and Tools 🛠️</h1>
+<li>Vite</li>
+<li>SCSS</li>
+<li>TypeScript</li>
+<li>DOM Manipulation</li>
+<li>REST Countries API: To fetch country data.</li>
+<li>Responsive Design: Layout adapts to different screen sizes.</li>
+
+
+
