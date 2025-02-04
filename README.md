@@ -1,13 +1,13 @@
 # Country Explorer App 🌍<br>
 
 A web application that allows you to explore details about various countries using the REST Countries API. 
-With features like filtering, searching, and detailed country profiles, this is a fully-fledged application to explore the world!
+With features like filtering, searching, and detailed country profiles, explore the world!
 
 <h1>Features ⭐</h1>
-<li>**Search by name:** Quickly find a country by entering its name</li>
-<li>**Filter by region,** population, and more: Use a dropdown menu to filter based on various criteria.</li>
-<li>**Detailed view:** Click on a country to see its details, including map links and statistics.</li>
-<li>**Random country view:** See a list of random countries on the homepage.</li>
+<li><strong>Search by name:</strong> Quickly find a country by entering its name</li>
+<li><strong>Filter by region,</strong> population, and more: Use a dropdown menu to filter based on various criteria.</li>
+<li><strong>Detailed view:</strong> Click on a country to see its details, including map links and statistics.</li>
+<li><strong>Random country view:</strong> See a list of random countries on the homepage.</li>
 
 <h1>How to compile and run your project</h1><br>
 <li>Clone this repository:</li>
@@ -54,7 +54,7 @@ With features like filtering, searching, and detailed country profiles, this is 
 </pre>
 ```
 <h1>API Documentation🌐 </h1><br>
-The project uses the** REST Countries API** to fetch country data.
+The project uses the<strong>REST Countries API</strong>strong> to fetch country data.
 <p>API Endpoints</p>
 <li>Fetch all countries: https://restcountries.com/v3.1/all</li>
 <li>Search for a country by name: https://restcountries.com/v3.1/name/{name}</li>
