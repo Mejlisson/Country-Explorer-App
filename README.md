@@ -54,7 +54,7 @@ With features like filtering, searching, and detailed country profiles, explore 
 </pre>
 ```
 <h1>API Documentation🌐 </h1><br>
-The project uses the<strong>REST Countries API</strong>strong> to fetch country data.
+The project uses the<strong>REST Countries API</strong> to fetch country data.
 <p>API Endpoints</p>
 <li>Fetch all countries: https://restcountries.com/v3.1/all</li>
 <li>Search for a country by name: https://restcountries.com/v3.1/name/{name}</li>
