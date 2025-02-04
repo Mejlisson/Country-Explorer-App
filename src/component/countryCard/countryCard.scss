@@ -1,6 +1,5 @@
 @use "../../styles/mixin.scss";
 
-
 // Country Card
 .country-card {
     background-color: #CAE0F9;
@@ -22,7 +21,7 @@
       margin-bottom: 20px;
     }
   
-    h2 {  //Namn på landet
+    h2 {  //Namn 
       font-size: 1.5rem;
       color: #5d6d8a;
       margin: 10px 0;
@@ -30,11 +29,7 @@
       width: auto;
     }
   
-    p {
-      font-size: 1rem;
-      margin: 5px 0;
-      color: #7890a8;
-    }
+    
   }
 
   // Mobilformat
