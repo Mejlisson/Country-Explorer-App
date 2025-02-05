@@ -11,7 +11,7 @@ body {
   
 // Nav
 nav {
-    background-color: #DDEAF9;
+    background-color: $color-background;
     padding: 20px;
     font-size: 2rem;
     font-weight: bold;
@@ -23,7 +23,7 @@ nav {
   
 // Footer
 footer {
-    background-color: #DDEAF9;
+    background-color: $color-background;
     display: flex;
     justify-content: center;
     align-items: center;

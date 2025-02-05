@@ -26,6 +26,7 @@ export async function handleSearch(query: string, filterType: string) {
     }
 }
 
+
 /*
 export async function handleSearch(query: string) {
     if (query) {

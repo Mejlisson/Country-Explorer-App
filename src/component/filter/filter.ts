@@ -6,7 +6,6 @@ export const createDropDown = (): HTMLSelectElement => {
     const filterDropdown = document.createElement("select");
     filterDropdown.id = "filter-dropdown";
     filterDropdown.innerHTML = `
-        <option value="all">Filter</option>
         <option value="name">Name</option>
         <option value="region">Region</option>
         <option value="subregion">Subregion</option>
@@ -17,7 +16,6 @@ export const createDropDown = (): HTMLSelectElement => {
         <option value="landlocked">Landlocked</option>
         <option value="area">Area (greater than)</option>
         <option value="timezone">Timezone</option>
-        <option value="continent">Continent</option>
         <option value="startOfWeek">Start of Week</option>
     `;
     return filterDropdown;

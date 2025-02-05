@@ -1,0 +1,16 @@
+.back-button {
+    background-color: #5d6d8a;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: #4a5870;
+    }
+  
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  
