@@ -3,8 +3,8 @@ import "./details.scss";
 import { searchCountriesByName } from "../api/api";
 
 const displayCountryDetail = async () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const countryName = urlParams.get('name');
+    const urlParams = new URLSearchParams(window.location.search); //adresserar till url för detail html i renderCountries funktionen (rendet.ts)
+    const countryName = urlParams.get('name'); 
 
     if (countryName) {
         const country = await searchCountriesByName(countryName);
