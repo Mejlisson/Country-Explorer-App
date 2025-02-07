@@ -32,14 +32,14 @@ body {
       img {
         height: 50px; 
         width: 50px; 
-        object-fit: contain; // don't stretch
+        object-fit: contain; 
         border-radius: 50%; 
         @include hover-scale(); //hover-effekt
       }
   
       .text {
-        font-size: 1.5rem; // Large text size
-        font-family: 'Comic Sans MS', cursive, sans-serif; // Fun font for "Adventure Time"
+        font-size: 1.5rem; 
+        font-family: 'Comic Sans MS', cursive, sans-serif; 
         color: $color-primary;
       }
     }
@@ -89,9 +89,9 @@ body {
   
     #map-card {
       background-image: url('../../../gifs/giphy (1).gif');
-      background-repeat: no-repeat;
-      background-size: contain; // Ensure the GIF fits well
-      background-position: center; // Center the GIF
+      background-repeat: no-repeat; //måste tydligen ha med denna så att jag inte får dubbla gifs
+      background-size: contain; 
+      background-position: center; 
       grid-column: 2 / 3;
       grid-row: 1 / span 2;
       background-color: #CAE0F9;
@@ -108,7 +108,7 @@ body {
     }
   }
   
-  /* Responsiv layout */
+  /* Responsiv */
   @media (max-width: 768px) {
     nav {
       font-size: 1.5rem;

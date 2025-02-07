@@ -1,4 +1,3 @@
-// src/components/CountryCard/CountryCard.ts
 import "./countryCard.scss";
 import { CountryDetails } from "../../type/type";
 

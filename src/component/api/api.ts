@@ -1,5 +1,5 @@
 import { CountryDetails } from '../../type/type';
-const apiUrl = "https://restcountries.com/v3.1"; //basurl till mitt API  1 Endpoint
+const apiUrl = "https://restcountries.com/v3.1"; //basUrl till mitt API  1 Endpoint
 
 // Funktion för att hämta alla länder
 export async function fetchCountries(): Promise < CountryDetails[]> { //Promise < CountryDetails[] visar tydligt att denna returnerar en arrya av CountryDetails.
@@ -16,7 +16,7 @@ export async function fetchCountries(): Promise < CountryDetails[]> { //Promise 
   }
 }
 
-const apiUrlName ="https://restcountries.com/v3.1/name/{name}"; //2:a Endpoint
+const apiUrlName ="https://restcountries.com/v3.1/name/{name}"; //2:a Endpoint bara för att testa och visa att man igentligen kan använda en url och ändå fö ut olika json data
 
 // Sök efter länder baserat på namn eller region
 export async function searchCountriesByName(query: string): Promise<CountryDetails[]> {
