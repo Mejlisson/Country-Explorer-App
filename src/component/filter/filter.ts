@@ -1,7 +1,17 @@
 import "./filter.scss";
 import { CountryDetails } from "../../type/type";
 
-// Skapa dropdown
+// Skapa dropdown//Optimerad vertion
+export const createDropDown =(): HTMLSelectElement => {
+    const filterDropdown = document.createElement("select");
+    filterDropdown.id = "filter-dropdown";
+    const options = [
+        "name", "region", "subregion", "currency", "language", "borders", 
+        "population", "landlocked", "area", "timezone", "startOfWeek"
+    ];
+    filterDropdown.innerHTML = options.map(opt => `<option value="${opt}">${opt.charAt(0).toUpperCase() + opt.slice(1)}</option>`).join('');
+    return filterDropdown;
+};
 export const createDropDown = (): HTMLSelectElement => {
     const filterDropdown = document.createElement("select");
     filterDropdown.id = "filter-dropdown";
@@ -19,7 +29,7 @@ export const createDropDown = (): HTMLSelectElement => {
         <option value="startOfWeek">Start of Week</option>
     `;
     return filterDropdown;
-};
+};*/
 
 // Filterfunktion
 export const filterCountries = (
