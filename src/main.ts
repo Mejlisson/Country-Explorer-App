@@ -11,7 +11,7 @@ const searchContainer = document.querySelector<HTMLDivElement>(".search-containe
 const filterDropdown = createDropDown();
 searchContainer?.appendChild(filterDropdown);
 
-//Ändra placering av filter
+//Ändra placering av filter så den ligger före search
 if (searchContainer && searchInput) {
     searchContainer.insertBefore(filterDropdown, searchInput); //insertBefore - Detta var något nytt och väldigt bra
 }

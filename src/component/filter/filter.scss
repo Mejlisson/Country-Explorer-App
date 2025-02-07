@@ -1,2 +1,18 @@
-@use "../../styles/mixin.scss"
+@use "../../styles/mixin.scss";
 
+@media (max-width: 768px) { 
+  .search-container {
+    display: flex;
+    flex-direction: column; // Vertikal layout
+    gap: 1rem; 
+    padding: 1rem;
+
+    #filter-dropdown,
+    #search-input,
+    #search-button {
+      width: 100%; 
+      max-width: 400px; //max bredd
+      margin: 0 auto; 
+    }
+  }
+}
