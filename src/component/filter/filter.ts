@@ -12,24 +12,6 @@ export const createDropDown =(): HTMLSelectElement => {
     filterDropdown.innerHTML = options.map(opt => `<option value="${opt}">${opt.charAt(0).toUpperCase() + opt.slice(1)}</option>`).join('');
     return filterDropdown;
 };
-export const createDropDown = (): HTMLSelectElement => {
-    const filterDropdown = document.createElement("select");
-    filterDropdown.id = "filter-dropdown";
-    filterDropdown.innerHTML = `
-        <option value="name">Name</option>
-        <option value="region">Region</option>
-        <option value="subregion">Subregion</option>
-        <option value="currency">Currency</option>
-        <option value="language">Language</option>
-        <option value="borders">Borders</option>
-        <option value="population">Population (over)</option>
-        <option value="landlocked">Landlocked</option>
-        <option value="area">Area (greater than)</option>
-        <option value="timezone">Timezone</option>
-        <option value="startOfWeek">Start of Week</option>
-    `;
-    return filterDropdown;
-};*/
 
 // Filterfunktion
 export const filterCountries = (
